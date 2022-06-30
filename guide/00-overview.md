@@ -66,7 +66,8 @@ This code has some major issues, including that it uses a directory that is spec
 
 
 <hr> 
-We're going to combine several things into this assignment. You'll be asked to make some modifications to your training repository and also to create a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) that captures these changes. 
+
+We're going to combine several things into this assignment. You'll be asked to make some modifications to your training repository and also to create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) that captures these changes. 
 
 #### Background on phases 
 
@@ -245,10 +246,10 @@ list(
 
 then use `Ctrl+D` to exit the file creation mode and return to the prompt. 
 
----
 Finally, create a `pull request` that includes this new file (the file should be called `_targets.R`).
 
-<hr> 
+---
+
 ### Modifying your pull request 
 
 * Great work, but it would be great to download the `model_RMSEs.csv` to `1_fetch/out/model_RMSEs.csv` instead. Can you make a change to make sure that happens when you build this target?
@@ -279,7 +280,9 @@ The real power of depedency management is when something changes - that's the EU
 In the meantime, here are a few nice tricks given you have a functional pipeline. 
 
 - [ ] run `tar_make()` again. What happens? Hopefully not much. I see this: 
+
 ![make all is fresh](https://user-images.githubusercontent.com/13220910/113453089-eb94b380-93ca-11eb-92b6-25032835c028.png)
+
 Which means everthing is up to date so all targets are :OK:
 
 - [ ] now try making a change to one of your functions in your code. What happens after running `tar_make()` then? 
