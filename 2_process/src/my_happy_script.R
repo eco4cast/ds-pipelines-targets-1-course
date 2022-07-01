@@ -5,7 +5,7 @@ library(stringr)
 library(sbtools)
 library(whisker)
 
-project_output_dir <- 'my_dir'
+project_output_dir <- 'meow'
 
 dir.create(project_output_dir)
 
