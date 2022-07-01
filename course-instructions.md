@@ -86,7 +86,7 @@ We recommend having `src` and `out` folders within each phase folder that contai
 
 Create a two phase directory structure for "fetch" and "process" concepts, and include `src` and `out` folders. Move the example script (`my_happy_script.R`) from the `my_work_R` folder into one of the `src` folders (at this time, it doesn't matter which one you choose) and delete any existing folders that aren't part of the intended structure.
 
-When you are done, open a `pull request` with the changes.
+When you are done, open a `pull request` with the changes.  Make sure the base repository for the pull request is still your forked repository _not_ the upstream `eco4cast` repository.  
 
 <hr> 
 
@@ -111,7 +111,7 @@ data <- fetch_data()
 plot_results(data)
 ```
 
-Push your commit(s) to the open pull request and assign your course labmate for review. 
+Push your commit(s) to the open pull request and assign your course labmate for review. Make sure the base repository for the pull request is still your forked repository _not_ the upstream `eco4cast` repository.  
 
 ## Why dependency management? 
 We're asking everyone to invest in the concepts of _reproducibility_ and _efficiency of reproducibility_, both of which are enabled via dependency management systems such as `remake`, `scipiper`, `drake`, and `targets`.
@@ -191,7 +191,7 @@ We'll briefly explain some of the functions and conventions used here. For more 
   
 ---
 
-We're going to start with this simple example, and modify it to match our pipeline structure. This will start by creating a new branch, creating a new file, adding that file to git tracking, and opening a new pull request that includes the file:
+We're going to start with this simple example, and modify it to match our pipeline structure. This will start by creating a new branch, creating a new file, adding that file to git tracking, and opening a new pull request that includes the `_targets.R` makefile. 
 
 ### :keyboard: Activity: get your code plugged into a makefile
 
@@ -246,7 +246,7 @@ list(
 
 then use `Ctrl+D` to exit the file creation mode and return to the prompt. 
 
-Finally, create a `pull request` that includes this new file (the file should be called `_targets.R`).
+Finally, create a `pull request` that includes this new file (the file should be called `_targets.R`). Make sure the base repository for the pull request is still your forked repository _not_ the upstream `eco4cast` repository.  
 
 ---
 
@@ -263,7 +263,7 @@ So, what does this do for you? Well, if you had this `_targets.R` file in your c
 
 ---
 
-Now - adding on to this PR by pushing up additional commits - add and modify code, folders, and this makefile so you can build _your_ `3_visualize/out/figure_1.png` with `targets::tar_make()` (BTW, if you haven't run into this syntax, {package_name}::{function_name} allows you to run a function without `library({package_name})`). Build on your existing folders, functions, and code from the previous sections by continuing with the phases `1_fetch`, `2_process`, and `3_visualize`. Comment in the pull request with a screenshot of the build message, like we have in the message above :point_up:. Assign your course labmate to review your PR, and they may ask for a few changes before merging. 
+Now - adding on to this PR by pushing up additional commits - add and modify code, folders, and this makefile so you can build _your_ `3_visualize/out/figure_1.png` with `targets::tar_make()` (BTW, if you haven't run into this syntax, {package_name}::{function_name} allows you to run a function without `library({package_name})`). Build on your existing folders, functions, and code from the previous sections by continuing with the phases `1_fetch`, `2_process`, and `3_visualize`. Comment in the pull request with a screenshot of the build message, like we have in the message above :point_up:. Assign your course labmate to review your PR, and they may ask for a few changes before merging. Make sure the base repository for the pull request is still your forked repository _not_ the upstream `eco4cast` repository.  
 
 There is a file in your repo called `.gitignore`. Add a line with `_targets` so that git doesn't track the contents of the `targets` directory. In addition, make sure that the contents of `1_fetch/out/*` will be ignored by git because you don't want to store changes to your downloaded .csv files (you may have already added a more generic `*/out/*` to your `.gitignore` that handles all `out/` folders in this repo). 
 
