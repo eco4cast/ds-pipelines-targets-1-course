@@ -1,3 +1,5 @@
+_Before starting, first `fork` this repository to your own GitHub_ 
+
 <h3 align="center">Pipelines overview</h3>
 
 Data analyses are often complex. Data pipelines are ways of managing that complexity. Our data pipelines have two foundational pieces:
